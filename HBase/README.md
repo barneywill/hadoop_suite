@@ -54,10 +54,28 @@ snappy
 ### 4.2 Block Encoding
 FAST_DIFF
 
-### 4.2 Compaction Queue
+### 4.3 Compaction Queue
 - offpeak/throughput/merge small store
 - hbase.regionserver.global.memstore.size
 - hbase.hregion.memstore.flush.size
 - hbase.hstore.compaction.max
 - hbase.hregion.majorcompaction
 
+## 5 Commands
+```
+list_namespace
+
+list_namespace_tables '<namespace_name>'
+
+list
+
+create_namespace '<namespace_name>'
+
+use '<namespace_name>'
+
+create '<table_name>'
+
+put '<table_name>', '<row_key>', '<column_family>:<column_qualifier>', '<new_value>'
+
+deleteall '<table_name>', '<row_key>'
+```
