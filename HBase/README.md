@@ -19,12 +19,15 @@ Each RegionServer has:
 ## 2 Concepts
 
 ### 2.1 LSM Tree (Log-Structured Merge Tree)
+SST: Sorting String Table
 
 ![LMS Tree](https://github.com/barneywill/hadoop_suite/blob/main/imgs/lsmtree.jpg)
 
 ### 2.2 WAL(Write Ahead Log)
 A write ahead log is an append-only auxiliary disk-resident structure used for crash and transaction recovery. The changes are first recorded in the log, which must be written to stable storage, before the changes are written to the database. 
 It is a standard method for ensuring data integrity. 
+- Low-Water Mark: An index in the write ahead log showing which portion of the log can be discarded.
+- High-Water Mark: An index in the write ahead log showing the last successful replication.
 
 ### 2.3 Namespace, Table, Row, Rowkey, Column Family, Column
 - Namespace: a group of tables, like database
@@ -52,5 +55,9 @@ snappy
 FAST_DIFF
 
 ### 4.2 Compaction Queue
-
+- offpeak/throughput/merge small store
+- hbase.regionserver.global.memstore.size
+- hbase.hregion.memstore.flush.size
+- hbase.hstore.compaction.max
+- hbase.hregion.majorcompaction
 
