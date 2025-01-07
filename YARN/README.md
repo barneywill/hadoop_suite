@@ -13,6 +13,8 @@ The ResourceManager is the ultimate authority that arbitrates resources among al
 ### 1.2 NodeManager
 The NodeManager is the per-machine framework agent who is responsible for containers, monitoring their resource usage (cpu, memory, disk, network) and reporting the same to the ResourceManager/Scheduler.
 
+### 1.3 HistoryServer
+
 ## 2 Scheduler
 - FIFO
 - Capacity
