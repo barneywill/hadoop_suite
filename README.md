@@ -9,3 +9,5 @@
 |5|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Zookeeper'>Zookeper</a>|Coordinator, Paxos|
 |6|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Oozie'>Oozie</a>|Orchestration, Workflow|
 |7|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Benchmark'>Benchmark</a>|Benchmark: TPC-DS, HiBench, SSB|
+
+![Hue](https://github.com/barneywill/hadoop_suite/blob/main/imgs/hue.jpg)
