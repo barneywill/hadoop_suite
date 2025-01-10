@@ -2,9 +2,16 @@
 # HDFS
 A distributed file system that provides high-throughput access to application data.
 
+| |Index|
+|---|---|
+|1|[Roles(NameNode, DataNode)](#role)|
+|2|[File, Block, Replica](#file)|
+|3|[Run](#run)|
+|4|[Commands](#command)|
+
 ![HDFS Architecture](https://github.com/barneywill/hadoop_suite/blob/main/imgs/hdfs_architecture.jpg)
 
-## 1 Roles
+## 1 <a id='role'></a>Roles
 ### 1.1 NameNode
 The namenode manages the filesystem namespace. It maintains the filesystem tree and the metadata for all the files and directories in the tree. fsimage、edit log
 - HA
@@ -18,11 +25,11 @@ Total = 198 ∗ num(Directory + Files) + 176 ∗ num(blocks) + 2% ∗ size(JVM M
 ### 1.2 DataNode
 Datanodes store the actual data.
 
-## 2 File, Block, Replica
+## 2 <a id='file'></a>File, Block, Replica
 
 ![HDFS Files](https://github.com/barneywill/hadoop_suite/blob/main/imgs/hdfs_files.jpg)
 
-## 3 Run
+## 3 <a id='run'></a>Run
 
 ```
 bin/hadoop namenode -format
@@ -35,7 +42,7 @@ hdfs dfsadmin -report
 http://$namenode:9870/dfshealth.html#tab-overview
 ```
 
-## 4 Commands
+## 4 <a id='command'></a>Commands
 ```
 hdfs dfs -ls /
 hdfs dfs -du -h /

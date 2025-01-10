@@ -1,9 +1,19 @@
 # Hive
 A data warehouse infrastructure that provides data summarization and ad hoc querying.
 
+| |Index|
+|---|---|
+|1|[Roles(Metastore, HiveServer2)](#role)|
+|2|[Clients](#client)|
+|3|[SERDE](#serde)|
+|4|[External Table](#external)|
+|5|[Join](#join)|
+|6|[Execution](#execution)|
+|7|[Performance Tuning](#tuning)|
+
 ![Hive Architecture](https://github.com/barneywill/hadoop_suite/blob/main/imgs/hive_architect.jpg)
 
-## 1 Roles
+## 1 <a id='role'></a>Roles
 
 ### 1.1 Metastore
 Store the metadata of objects such as their location, schema details also contain the detail about the cluster partition to keep a track of dataset progress.
@@ -24,7 +34,7 @@ Store the metadata of objects such as their location, schema details also contai
 ### 1.2 HiveServer2
 Provide an interaction of external clients with Hive using JDBC or ODBC protocol.
 
-## 2 Clients
+## 2 <a id='client'></a>Clients
 
 ```
 # hive
@@ -34,7 +44,7 @@ Provide an interaction of external clients with Hive using JDBC or ODBC protocol
 bin/beeline -u jdbc:hive2://$HS2_HOST:$HS2_PORT
 ```
 
-## 3 SERDE
+## 3 <a id='serde'></a>SERDE
 Serialize/Deserilize
 - csv
   - org.apache.hadoop.hive.serde2.OpenCSVSerde
@@ -53,11 +63,11 @@ Serialize/Deserilize
 - lzo
 - snappy
 
-## 4 External Table
+## 4 <a id='external'></a>External Table
 - location
 - integration: hbase, es
 
-## 5 Join
+## 5 <a id='join'></a>Join
 - map join、broadcast
   - hive.auto.convert.join
 - bucket map join
@@ -68,7 +78,7 @@ Serialize/Deserilize
   - hive.optimize.skewjoin
 - left semi join
 
-## 6 Execution
+## 6 <a id='execution'></a>Execution
 SQL -> AST(Abstract Syntax Tree) -> Task(MapRedTask，FetchTask) -> QueryPlan(Tasks) -> Job(Yarn)
 
 - Map
@@ -81,4 +91,4 @@ SQL -> AST(Abstract Syntax Tree) -> Task(MapRedTask，FetchTask) -> QueryPlan(Ta
 ### CBO(Cost Based Optimize)
 The main goal of a CBO is to generate efficient execution plans by examining the tables and conditions specified in the query, ultimately cutting down on query execution time and reducing resource utilization.
 
-## 7 <a id='python' href='https://github.com/barneywill/hadoop_suite/tree/main/Hive/hive_performance_tuning.md'>Performance Tuning</a>
+## 7 <a id='tuning' href='https://github.com/barneywill/hadoop_suite/tree/main/Hive/hive_performance_tuning.md'>Performance Tuning</a>

@@ -7,3 +7,4 @@
 |3|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Hive'>Hive</a>|SQL Query|
 |4|<a href='https://github.com/barneywill/hadoop_suite/tree/main/HBase'>HBase</a>|KV Query|
 |5|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Zookeeper'>Zookeper</a>|Coordinator|
+|6|<a href='https://github.com/barneywill/hadoop_suite/tree/main/Benchmark'>Benchmark</a>|Benchmark: TPC-DS, HiBench, SSB|
