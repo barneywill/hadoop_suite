@@ -80,3 +80,5 @@ SQL -> AST(Abstract Syntax Tree) -> Task(MapRedTask，FetchTask) -> QueryPlan(Ta
 
 ### CBO(Cost Based Optimize)
 The main goal of a CBO is to generate efficient execution plans by examining the tables and conditions specified in the query, ultimately cutting down on query execution time and reducing resource utilization.
+
+## 7 <a id='python' href='https://github.com/barneywill/hadoop_suite/tree/main/Hive/hive_performance_tuning.md'>Performance Tuning</a>
